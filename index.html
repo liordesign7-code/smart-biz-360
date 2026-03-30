@@ -1,116 +1,72 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart Biz 360</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-body{font-family:Arial;margin:0;background:#f5f6fa}
-</style>
-
+  <meta charset="UTF-8">
+  <title>SmartBiz360</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- מסך פתיחת חשבון -->
-<div id="login-box" style="
-position:fixed;
-inset:0;
-background:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999;
-">
+  <h1 style="text-align:center;">SmartBiz360</h1>
 
-  <div style="
-  width:90%;
-  max-width:320px;
-  background:#f8f9ff;
-  padding:20px;
-  border-radius:12px;
-  text-align:center;
-  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+  <!-- הוספת עסק -->
+  <div style="text-align:center;margin:20px;">
+    <input id="newBizName" placeholder="שם עסק חדש">
+    <button onclick="addBiz()">הוסף</button>
+  </div>
+
+  <!-- רשימה -->
+  <div id="bizList" style="text-align:center;"></div>
+
+  <!-- LOGIN BOX -->
+  <div id="login-box" style="
+  position:fixed;
+  inset:0;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
   ">
 
-    <h2>ברוך הבא 👋</h2>
-
-    <input id="user-name" placeholder="שם שלך"
-    style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc">
-
-    <input id="user-phone" placeholder="טלפון"
-    style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc">
-
-    <button onclick="saveUser()" style="
-    width:100%;
-    padding:12px;
-    background:#3b5bdb;
-    color:#fff;
-    border:none;
-    border-radius:8px;
-    font-weight:bold;
-    cursor:pointer;
+    <div style="
+    width:90%;
+    max-width:320px;
+    background:#f8f9ff;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
     ">
-    כניסה למערכת
-    </button>
 
-  </div>
-</div>
+      <h2>ברוך הבא 👋</h2>
 
-<!-- המערכת -->
-<div id="app">
+      <input id="user-name" placeholder="שם שלך"
+      style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc">
 
-  <div style="padding:20px">
-    <h1>Smart Biz 360 🚀</h1>
-    <p>מערכת CRM לניהול לידים</p>
+      <input id="user-phone" placeholder="טלפון"
+      style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc">
 
-    <a href="crm.html" style="
-    display:inline-block;
-    padding:12px 20px;
-    background:#3b5bdb;
-    color:#fff;
-    border-radius:8px;
-    text-decoration:none;
-    margin-top:10px;
-    ">
-    כניסה לניהול לידים
-    </a>
+      <button onclick="saveUser()" style="
+      width:100%;
+      padding:12px;
+      background:#3b5bdb;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      font-weight:bold;
+      cursor:pointer;
+      ">
+      כניסה למערכת
+      </button>
+
+    </div>
   </div>
 
-</div>
-
-<script src="data.js"></script>
-<script src="app.js"></script>
-
-<script>
-function saveUser(){
-  const name = document.getElementById('user-name').value;
-  let phone = document.getElementById('user-phone').value;
-
-  if(!name || !phone){
-    alert("תמלא שם וטלפון");
-    return;
-  }
-
-  phone = phone.replace(/^0/, '972');
-
-  localStorage.setItem("userName", name);
-  localStorage.setItem("userPhone", phone);
-
-  document.getElementById("login-box").style.display = "none";
-}
-
-window.onload = function(){
-  const phone = localStorage.getItem("userPhone");
-
-  if(phone){
-    document.getElementById("login-box").style.display = "none";
-  }
-}
-</script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 
 </body>
 </html>

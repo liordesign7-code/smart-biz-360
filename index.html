@@ -1,23 +1,47 @@
-<div id="login-box" >
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
 
-<h2>ברוך הבא 👋 </h2>
+<head>
+  <meta charset="UTF-8">
+  <title>SmartBiz360</title>
+</head>
 
-<input id="user-name" placeholder="שם שלך"
-style="width:100%; ריפוד: 10פיקסלים; שוליים-תחתון: 10פיקסים; רדיוס גבול: 8פיקסלים; מסגרת:1px solid #ccc">
+<body style="font-family:Arial; text-align:center; padding:40px;">
 
-<input id="user-phone" placeholder="טלפון"
-style="width:100%; ריפוד: 10פיקסלים; שוליים-תחתון: 15פיקסים; רדיוס גבול: 8פיקסלים; border:1px solid #ccc">
+  <div id="login-box" style="
+    width:90%;
+    max-width:320px;
+    margin:auto;
+    background:#f8f9ff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.1);
+  ">
 
-<button onclick="saveUser()" style="
-width:100%;
-ריפוד: 12פיקסלים;
-רקע: #3b5bdb;
-צבע:#fff;
-גבול: אין;
-רדיוס גבול: 8פיקסלים;
-font-weight:bold;
-סמן:מצביע;
-">
-כניסה למערכת
-</button>
+    <h2>ברוך הבא 👋</h2>
 
+    <input id="user-name" placeholder="שם שלך"
+    style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc">
+
+    <input id="user-phone" placeholder="טלפון"
+    style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc">
+
+    <button onclick="saveUser()" style="
+      width:100%;
+      padding:12px;
+      background:#3b5bdb;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      font-weight:bold;
+      cursor:pointer;
+    ">
+      כניסה למערכת
+    </button>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartBiz360 – לידים</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>📋 לידים</h1>
+    <a href="index.html">← עסקים</a>
+  </header>
+
+  <div class="container">
+
+    <!-- CRM Top Bar -->
+    <div class="crm-top">
+      <h2 id="bizName"></h2>
+      <button class="btn-primary" id="addLeadBtn">+ ליד חדש</button>
+    </div>
+
+    <!-- Add Lead Form -->
+    <div id="leadForm">
+      <h3>ליד חדש</h3>
+
+      <div class="form-field">
+        <label>שם *</label>
+        <input type="text" id="leadName" placeholder="שם מלא" />
+      </div>
+
+      <div class="form-field">
+        <label>טלפון</label>
+        <input type="tel" id="leadPhone" placeholder="050-0000000" />
+      </div>
+
+      <div class="form-field">
+        <label>אימייל</label>
+        <input type="email" id="leadEmail" placeholder="email@example.com" />
+      </div>
+
+      <div class="form-field">
+        <label>סטטוס</label>
+        <select id="leadStatus">
+          <option>חדש</option>
+          <option>בטיפול</option>
+          <option>סגור</option>
+          <option>לא רלוונטי</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label>הערות</label>
+        <textarea id="leadNotes" placeholder="הערות נוספות..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn-primary" id="saveLeadBtn">שמור</button>
+        <button class="btn-secondary" id="cancelLeadBtn">ביטול</button>
+      </div>
+    </div>
+
+    <!-- Leads List -->
+    <p class="section-title">כל הלידים</p>
+    <div id="leadsList"></div>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    initCrmPage();
+  </script>
+</body>
+</html>

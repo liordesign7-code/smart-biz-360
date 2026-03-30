@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartBiz360 – עסקים</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>📊 SmartBiz360</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- Add Business -->
+    <div class="add-bar">
+      <input type="text" id="newBizName" placeholder="שם עסק חדש..." />
+      <button class="btn-primary" id="addBizBtn">+ הוסף</button>
+    </div>
+
+    <!-- Business List -->
+    <p class="section-title">העסקים שלי</p>
+    <div id="bizList"></div>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    initIndexPage();
+  </script>
+</body>
+</html>

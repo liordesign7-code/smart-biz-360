@@ -1,0 +1,267 @@
+/* ===========================
+   SmartBiz360 - Styles
+   =========================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  direction: rtl;
+  background: #f4f6f9;
+  color: #222;
+  min-height: 100vh;
+}
+
+/* ---- Header ---- */
+header {
+  background: #1a73e8;
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.3rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ---- Container ---- */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+/* ---- Add Bar ---- */
+.add-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.add-bar input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* ---- Buttons ---- */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+}
+
+.btn-primary {
+  background: #1a73e8;
+  color: white;
+}
+
+.btn-secondary {
+  background: #e8eaed;
+  color: #333;
+}
+
+.btn-delete {
+  background: transparent;
+  padding: 6px 10px;
+  font-size: 1.1rem;
+  color: #999;
+}
+
+.btn-delete:hover {
+  color: #d32f2f;
+}
+
+/* ---- Business Card ---- */
+.biz-card {
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.biz-info {
+  cursor: pointer;
+  flex: 1;
+}
+
+.biz-info h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.biz-meta {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ---- Lead Form ---- */
+#leadForm {
+  display: none;
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+#leadForm h3 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* ---- Lead Card ---- */
+.lead-card {
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.lead-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lead-detail {
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+  color: #444;
+}
+
+.lead-detail a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.lead-notes {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.lead-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.lead-date {
+  font-size: 0.78rem;
+  color: #aaa;
+}
+
+.lead-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lead-actions select {
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* ---- Status Badges ---- */
+.status {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.status-new       { background: #e3f2fd; color: #1565c0; }
+.status-active    { background: #fff8e1; color: #f57f17; }
+.status-closed    { background: #e8f5e9; color: #2e7d32; }
+.status-irrelevant{ background: #f3e5f5; color: #6a1b9a; }
+
+/* ---- Section Title ---- */
+.section-title {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Empty State ---- */
+.empty {
+  text-align: center;
+  color: #aaa;
+  padding: 30px 0;
+  font-size: 0.95rem;
+}
+
+/* ---- CRM Header ---- */
+.crm-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.crm-top h2 {
+  font-size: 1.1rem;
+}

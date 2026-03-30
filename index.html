@@ -1,72 +1,23 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>SmartBiz360</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
+<div id="login-box" >
 
-<body>
+<h2>ברוך הבא 👋 </h2>
 
-  <h1 style="text-align:center;">SmartBiz360</h1>
+<input id="user-name" placeholder="שם שלך"
+style="width:100%; ריפוד: 10פיקסלים; שוליים-תחתון: 10פיקסים; רדיוס גבול: 8פיקסלים; מסגרת:1px solid #ccc">
 
-  <!-- הוספת עסק -->
-  <div style="text-align:center;margin:20px;">
-    <input id="newBizName" placeholder="שם עסק חדש">
-    <button onclick="addBiz()">הוסף</button>
-  </div>
+<input id="user-phone" placeholder="טלפון"
+style="width:100%; ריפוד: 10פיקסלים; שוליים-תחתון: 15פיקסים; רדיוס גבול: 8פיקסלים; border:1px solid #ccc">
 
-  <!-- רשימה -->
-  <div id="bizList" style="text-align:center;"></div>
+<button onclick="saveUser()" style="
+width:100%;
+ריפוד: 12פיקסלים;
+רקע: #3b5bdb;
+צבע:#fff;
+גבול: אין;
+רדיוס גבול: 8פיקסלים;
+font-weight:bold;
+סמן:מצביע;
+">
+כניסה למערכת
+</button>
 
-  <!-- LOGIN BOX -->
-  <div id="login-box" style="
-  position:fixed;
-  inset:0;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-  ">
-
-    <div style="
-    width:90%;
-    max-width:320px;
-    background:#f8f9ff;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 4px 20px rgba(0,0,0,0.1);
-    ">
-
-      <h2>ברוך הבא 👋</h2>
-
-      <input id="user-name" placeholder="שם שלך"
-      style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc">
-
-      <input id="user-phone" placeholder="טלפון"
-      style="width:100%;padding:10px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc">
-
-      <button onclick="saveUser()" style="
-      width:100%;
-      padding:12px;
-      background:#3b5bdb;
-      color:#fff;
-      border:none;
-      border-radius:8px;
-      font-weight:bold;
-      cursor:pointer;
-      ">
-      כניסה למערכת
-      </button>
-
-    </div>
-  </div>
-
-  <script src="data.js"></script>
-  <script src="app.js"></script>
-
-</body>
-</html>
